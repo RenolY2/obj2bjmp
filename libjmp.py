@@ -250,8 +250,6 @@ class BJMPTriangle(object):
         tri.triangle = triangle
         triangle.normal *= -1
         round_vector(triangle.normal, 6)
-
-        
         tri.coll_data = coll_data
         tri.normal = triangle.normal
 
@@ -267,7 +265,6 @@ class BJMPTriangle(object):
             tri.tangent = Vector3(0.0, 0.0, 0.0)
             tri.tangent = triangle.normal.cross(tri.binormal)#*-1
             tri.tangent.normalize()
-            tri.normal = triangle.normal
             if coll_data is None:
                 tri.coll_data = 0x0100
         else:
